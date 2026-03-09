@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Service Pack BV | info@servicepack.nl · +31 (0)76-503 85 31</title>
+<meta name="description" content="Contact Service Pack BV. Response within one hour during opening hours (Mon–Fri 07:30–16:30). Tel: +31 (0)76-503 85 31. E-mail: info@servicepack.nl.">
+<link rel="canonical" href="https://servicepack.nl/en/contact.html">
+<meta property="og:title" content="Contact — Service Pack BV">
+<meta property="og:description" content="Response within one hour. Mon–Fri 07:30–16:30. +31 (0)76-503 85 31 · info@servicepack.nl">
+<meta property="og:url" content="https://servicepack.nl/en/contact.html">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/en/"><div style="background:#fff; border-radius:8px; padding:5px 9px 6px; display:inline-block; line-height:0; flex-shrink:0;"><img src="/brand_assets/logo-sp.jpg" alt="Service Pack BV" style="height:56px; display:block;"></div></a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="/en/">Home</a>
+        <a href="/en/services/">Services</a>
+        <a href="/en/about.html">About</a>
+        <a href="/en/sectors.html">Sectors</a>
+        <a href="/en/cases.html">Cases</a>
+        <a href="/en/contact.html" class="nav-active">Contact</a>
+        <a href="/en/contact.html" class="nav-cta">Request a quote</a>
+      </div>
+      <div class="lang-switch" aria-label="Choose language"><a href="/contact.html" class="lang-link">NL</a><div class="lang-divider"></div><a href="/en/contact.html" class="lang-link" aria-current="page">EN</a></div>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/en/">Home</a><a href="/en/services/">Services</a><a href="/en/about.html">About</a><a href="/en/sectors.html">Sectors</a><a href="/en/cases.html">Cases</a><a href="/en/contact.html">Contact</a>
+    <a href="/en/contact.html" class="mobile-cta-btn">Request a quote →</a>
+    <div class="mobile-lang">
+      <a href="/contact.html" class="mobile-lang-link">NL</a>
+      <span class="mobile-lang-divider"></span>
+      <a href="/en/contact.html" class="mobile-lang-link active">EN</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <span class="section-label" style="margin-bottom:16px; display:block;">Contact</span>
+      <h1>Get in touch</h1>
+      <p>Do you have a specific question, a request or would you like to meet us first? Fill in the form and we will respond within one hour during our opening hours.</p>
+    </div>
+    <div class="page-hero-right">
+      <div class="hero-info-card">
+        <div class="hero-info-row"><div class="hero-info-dot"></div><span><strong style="color:#fff;">Response within 1 hour</strong> — during our opening hours</span></div>
+        <div class="hero-info-row"><div class="hero-info-dot"></div><span>Available Mon–Fri · 07:30–16:30</span></div>
+        <div class="hero-info-row"><div class="hero-info-dot"></div><span>Direct contact with a dedicated team member</span></div>
+        <div class="hero-info-row"><div class="hero-info-dot"></div><span>info@servicepack.nl</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div>
+        <h2 style="font-size:1.5rem; font-weight:800; color:var(--navy); margin-bottom:8px;">Send us a message</h2>
+        <p style="color:var(--muted); font-size:0.9375rem; margin-bottom:32px;">We respond within one hour during our opening hours.</p>
+        <form id="contact-form" onsubmit="handleSubmit(event)" method="post" action="/api/contact">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="naam">Name *</label>
+              <input type="text" id="naam" name="naam" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="bedrijf">Company name *</label>
+              <input type="text" id="bedrijf" name="bedrijf" placeholder="Your company name" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email address *</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="tel">Phone number</label>
+              <input type="tel" id="tel" name="tel" placeholder="+31 6 __ __ __ __">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="dienst">Service</label>
+            <select id="dienst" name="dienst">
+              <option value="">Select a service</option>
+              <option>Fulfillment</option>
+              <option>Warehousing</option>
+              <option>Labeling</option>
+              <option>Rework</option>
+              <option>Assembly</option>
+              <option>Repacking</option>
+              <option>Hub services</option>
+              <option>Container unloading</option>
+              <option>Multiple / Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bericht">Your message *</label>
+            <textarea id="bericht" name="bericht" placeholder="Briefly describe your situation, volume or question..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Send request →</button>
+          <p class="form-note">Your data is treated confidentially and not shared with third parties.</p>
+        </form>
+        <div id="form-success" style="display:none; background:rgba(34,197,94,0.08); border:1px solid rgba(34,197,94,0.25); border-radius:12px; padding:24px; margin-top:20px; text-align:center;">
+          <div style="font-size:2rem; margin-bottom:12px;">✓</div>
+          <h3 style="color:#166534; font-size:1.125rem; font-weight:700; margin-bottom:8px;">Message received!</h3>
+          <p style="color:#166534; font-size:0.9375rem;">We will contact you within one hour (during opening hours).</p>
+        </div>
+        <div id="form-error" style="display:none; background:rgba(220,38,38,0.08); border:1px solid rgba(220,38,38,0.25); border-radius:12px; padding:16px; margin-top:20px;">
+          <p style="color:#991B1B; font-size:0.9375rem; margin:0;">Sending failed. Please try again or email info@servicepack.nl.</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:1.25rem; font-weight:800; color:var(--navy); margin-bottom:32px;">Contact details</h3>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <h4>Address</h4>
+            <p>Lokkerdreef 20<br>4879 ND Etten-Leur<br>The Netherlands</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <h4>Phone</h4>
+            <p>+31 (0)76-503 85 31</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <h4>Email</h4>
+            <p>info@servicepack.nl</p>
+          </div>
+        </div>
+        <div class="hours-box">
+          <h4>Opening hours</h4>
+          <div class="hours-row"><span>Monday – Friday</span><span>07:30 – 16:30</span></div>
+          <div class="hours-row"><span>Saturday – Sunday</span><span>Closed</span></div>
+          <div style="margin-top:14px; padding-top:14px; border-top:1px solid var(--border);">
+            <p style="font-size:0.8125rem; color:var(--muted);">Response within 1 hour during opening hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><div style="background:#fff; border-radius:7px; padding:4px 8px 5px; display:inline-block; line-height:0; margin-bottom:16px;"><img src="/brand_assets/logo-sp.jpg" alt="Service Pack BV" style="height:54px; display:block;"></div><p class="footer-desc">Your European partner in logistics and co-packing.</p><div class="footer-contact"><p>info@servicepack.nl · +31 (0)76-503 85 31</p></div></div>
+      <div class="footer-col"><h4>Services</h4><a href="/en/services/fulfillment.html">Fulfillment</a><a href="/en/services/warehousing.html">Warehousing</a><a href="/en/services/labeling.html">Labeling</a><a href="/en/services/rework.html">Rework</a><a href="/en/services/assembly.html">Assembly</a><a href="/en/services/repacking.html">Repacking</a><a href="/en/services/hub-services.html">Hub services</a><a href="/en/services/container-unloading.html">Container unloading</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="/en/">Home</a><a href="/en/about.html">About</a><a href="/en/sectors.html">Sectors</a><a href="/en/cases.html">Cases</a><a href="/en/contact.html">Contact</a></div>
+      <div class="footer-col"><h4>Available</h4><p style="color:rgba(255,255,255,0.5); font-size:0.875rem; line-height:1.9;">Mon – Fri · 07:30–16:30</p></div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06); padding:24px 0 28px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+      <span style="font-size:0.6875rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.25);">Certified &amp; accredited</span>
+      <div style="display:flex; align-items:center; gap:28px; flex-wrap:wrap;">
+        <img src="https://servicepack.nl/wp-content/uploads/2025/04/ISO-logo-1-400x429-1.png" alt="ISO 9001:2015" style="height:40px; filter:brightness(0) invert(1); opacity:0.55; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='0.55'">
+        <img src="https://servicepack.nl/wp-content/uploads/2025/04/Skal_Gecertificeerd_Skal_Gecertificeerd.png" alt="Skal Certified" style="height:32px; filter:brightness(0) invert(1); opacity:0.55; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='0.55'">
+        <img src="https://servicepack.nl/wp-content/uploads/2025/04/sbb-beeldmerk-1.png" alt="SBB Accredited" style="height:44px; opacity:0.55; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.95'" onmouseout="this.style.opacity='0.55'">
+        <img src="https://servicepack.nl/wp-content/uploads/2025/04/sedex-logo-rond.png" alt="Sedex" style="height:36px; opacity:0.5; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='0.5'">
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Service Pack BV. All rights reserved.</p><div class="footer-legal"><a href="#">Privacy policy</a><a href="#">Terms &amp; conditions</a></div></div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const hamburger = document.getElementById('hamburger');
+  menu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true' : 'false');
+}
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.getElementById('hamburger').setAttribute('aria-expanded', 'false');
+  }
+});
+
+async function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const formSuccess = document.getElementById('form-success');
+  const formError = document.getElementById('form-error');
+  const submitButton = form.querySelector('button[type="submit"]');
+  formError.style.display = 'none';
+  submitButton.disabled = true;
+  submitButton.textContent = 'Sending...';
+  try {
+    const response = await fetch(form.action, {
+      method: form.method || 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (!response.ok) throw new Error('Submit failed');
+    form.style.display = 'none';
+    formSuccess.style.display = 'block';
+  } catch (error) {
+    formError.style.display = 'block';
+    submitButton.disabled = false;
+    submitButton.textContent = 'Send request →';
+  }
+}
+</script>
+</body>
+</html>
